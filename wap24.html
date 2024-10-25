@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change HTML Attribute Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Change HTML Attribute with JavaScript</h1>
+
+<img id="myImage" src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="Placeholder Image" width="300" />
+<br><br>
+<button id="changeImageButton">Change Image</button>
+
+<div id="output"></div>
+
+<script>
+    // Function to change the src attribute of the image
+    function changeImage() {
+        const imgElement = document.getElementById("myImage");
+        imgElement.src = "https://via.placeholder.com/300/FF5733/FFFFFF?text=New+Image"; // New image URL
+        document.getElementById("output").innerHTML = "Image source changed!";
+    }
+
+    // Adding event listener to the button
+    document.getElementById("changeImageButton").onclick = changeImage;
+</script>
+
+</body>
+</html>

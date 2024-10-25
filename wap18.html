@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Prompt, and Confirm Box Example</title>
+    <script type="text/javascript">
+        function showAlert() {
+            alert("This is an alert message!");
+        }
+
+        function showPrompt() {
+            var name = prompt("Please enter your name:", "John Doe");
+            if (name != null && name != "") {
+                alert("Hello " + name + "!");
+            } else {
+                alert("No name entered.");
+            }
+        }
+
+        function showConfirm() {
+            var result = confirm("Do you want to proceed?");
+            if (result) {
+                alert("You pressed OK!");
+            } else {
+                alert("You pressed Cancel!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Dialog Boxes Example</h1>
+    <button onclick="showAlert()">Show Alert Box</button>
+    <button onclick="showPrompt()">Show Prompt Box</button>
+    <button onclick="showConfirm()">Show Confirm Box</button>
+</body>
+</html>

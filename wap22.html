@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydown and Keyup Event Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Keydown and Keyup Event Handling</h1>
+
+<input type="text" id="textInput" placeholder="Type something..." />
+<div id="output"></div>
+
+<script>
+    const textInput = document.getElementById('textInput');
+    const output = document.getElementById('output');
+
+    // Keydown event
+    textInput.addEventListener('keydown', function(event) {
+        output.innerHTML = `Key Down: ${event.key} (Code: ${event.code})`;
+        console.log(`Key Down: ${event.key} (Code: ${event.code})`);
+    });
+
+    // Keyup event
+    textInput.addEventListener('keyup', function(event) {
+        output.innerHTML += `<br>Key Up: ${event.key} (Code: ${event.code})`;
+        console.log(`Key Up: ${event.key} (Code: ${event.code})`);
+    });
+</script>
+
+</body>
+</html>

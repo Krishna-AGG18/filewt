@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change HTML Content with JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript Change HTML Content Example</h1>
+
+<p id="myParagraph">This is the original content of the paragraph.</p>
+
+<button id="changeContentButton">Change Content</button>
+
+<div id="output"></div>
+
+<script>
+    // Function to change the content of the paragraph
+    function changeContent() {
+        document.getElementById("myParagraph").innerHTML = "This is the new content of the paragraph!";
+        document.getElementById("output").innerHTML = "The paragraph content has been changed.";
+    }
+
+    // Adding event listener to the button
+    document.getElementById("changeContentButton").onclick = changeContent;
+</script>
+
+</body>
+</html>

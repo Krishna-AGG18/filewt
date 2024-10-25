@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+    <style>
+        #eventBox {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #000;
+            margin: 20px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Event Handling Demonstration</h1>
+
+<div id="eventBox">Hover or Click Me!</div>
+
+<script>
+    const eventBox = document.getElementById('eventBox');
+
+    // Onclick Event
+    eventBox.onclick = function() {
+        alert('Box clicked!');
+    };
+
+    // Mouseover Event
+    eventBox.onmouseover = function() {
+        eventBox.style.backgroundColor = '#f0f0f0';
+        eventBox.innerHTML = 'Mouse Over!';
+    };
+
+    // Mouseout Event
+    eventBox.onmouseout = function() {
+        eventBox.style.backgroundColor = '#fff';
+        eventBox.innerHTML = 'Hover or Click Me!';
+    };
+
+    // Mouseenter Event
+    eventBox.onmouseenter = function() {
+        console.log('Mouse entered the box.');
+    };
+
+    // Double Click Event
+    eventBox.ondblclick = function() {
+        alert('Box double-clicked!');
+    };
+
+    // Mousemove Event
+    eventBox.onmousemove = function(event) {
+        const x = event.clientX - eventBox.getBoundingClientRect().left;
+        const y = event.clientY - eventBox.getBoundingClientRect().top;
+        console.log(`Mouse position: X: ${x}, Y: ${y}`);
+    };
+</script>   
+
+</body>
+</html>

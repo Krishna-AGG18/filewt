@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Event Handling Demonstration</h1>
+
+<form id="myForm">
+    <label for="textInput">Input Text:</label>
+    <input type="text" id="textInput" placeholder="Type something..." required>
+    
+    <label for="selectInput">Select Option:</label>
+    <select id="selectInput">
+        <option value="">--Choose an option--</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+    </select>
+
+    <button type="reset">Reset</button>
+    <input type="submit" value="Submit">
+</form>
+
+<div id="message"></div>
+
+<script>
+    // Load event
+    window.onload = function() {
+        console.log("Page loaded successfully!");
+    };
+
+    // Focus event
+    document.getElementById('textInput').onfocus = function() {
+        this.style.backgroundColor = '#e0f7fa';
+        console.log("Input field focused.");
+    };
+
+    // Blur event
+    document.getElementById('textInput').onblur = function() {
+        this.style.backgroundColor = '';
+        console.log("Input field lost focus.");
+    };
+
+    // Change event
+    document.getElementById('selectInput').onchange = function() {
+        console.log("Selected option changed to: " + this.value);
+    };
+
+    // Submit event
+    document.getElementById('myForm').onsubmit = function(event) {
+        event.preventDefault(); // Prevent actual form submission for demonstration
+        const messageDiv = document.getElementById('message');
+        messageDiv.innerHTML = "Form submitted successfully! Input: " + document.getElementById('textInput').value;
+        console.log("Form submitted.");
+    };
+    
+    // Reset event
+    document.getElementById('myForm').onreset = function() {
+        const messageDiv = document.getElementById('message');
+        messageDiv.innerHTML = "Form has been reset.";
+        console.log("Form reset.");
+    };
+</script>
+
+</body>
+</html>

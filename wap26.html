@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Demonstration of Window Object in JavaScript</h1>
+
+<button id="navButton">Show Navigation Info</button>
+<button id="screenButton">Show Screen Info</button>
+<button id="setTimeoutButton">Set Timeout Example</button>
+
+<div id="output"></div>
+
+<script>
+    // Function to show Navigation object information
+    function showNavigationInfo() {
+        const navInfo = `
+            User Agent: ${navigator.userAgent}<br>
+            Language: ${navigator.language}<br>
+            Online Status: ${navigator.onLine ? 'Online' : 'Offline'}
+        `;
+        document.getElementById("output").innerHTML = `<strong>Navigation Info:</strong><br>${navInfo}`;
+    }
+
+    // Function to show Screen object information
+    function showScreenInfo() {
+        const screenInfo = `
+            Screen Width: ${screen.width}px<br>
+            Screen Height: ${screen.height}px<br>
+            Available Width: ${screen.availWidth}px<br>
+            Available Height: ${screen.availHeight}px<br>
+            Color Depth: ${screen.colorDepth} bits<br>
+            Pixel Depth: ${screen.pixelDepth} bits
+        `;
+        document.getElementById("output").innerHTML = `<strong>Screen Info:</strong><br>${screenInfo}`;
+    }
+
+    // Function to demonstrate setTimeout
+    function setTimeoutExample() {
+        document.getElementById("output").innerHTML = "Waiting for 3 seconds...";
+        setTimeout(() => {
+            document.getElementById("output").innerHTML = "3 seconds have passed!";
+        }, 3000);
+    }
+
+    // Adding event listeners to buttons
+    document.getElementById("navButton").onclick = showNavigationInfo;
+    document.getElementById("screenButton").onclick = showScreenInfo;
+    document.getElementById("setTimeoutButton").onclick = setTimeoutExample;
+</script>
+
+</body>
+</html>

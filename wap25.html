@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change HTML Style with JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #myParagraph {
+            padding: 10px;
+            border: 1px solid #000;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Change HTML Style with JavaScript</h1>
+
+<p id="myParagraph">This is a paragraph whose style will change.</p>
+
+<button id="changeStyleButton">Change Style</button>
+
+<script>
+    // Function to change the style of the paragraph
+    function changeStyle() {
+        const paragraph = document.getElementById("myParagraph");
+        paragraph.style.backgroundColor = "#FF5733"; // Change background color
+        paragraph.style.color = "#FFFFFF"; // Change text color
+        paragraph.style.fontSize = "20px"; // Change font size
+        paragraph.style.borderRadius = "5px"; // Add border radius
+    }
+
+    // Adding event listener to the button
+    document.getElementById("changeStyleButton").onclick = changeStyle;
+</script>
+
+</body>
+</html>

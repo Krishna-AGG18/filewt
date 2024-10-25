@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Link styles */
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: purple; /* Color for visited links */
+        }
+
+        a:hover {
+            color: red; /* Color when hovered */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        a:active {
+            color: green; /* Color when active (clicked) */
+        }
+
+        /* Button styles */
+        .btn-custom {
+            background-color: lightgray;
+            border: 1px solid #ccc;
+        }
+
+        .btn-custom:hover {
+            background-color: darkgray; /* Change on hover */
+        }
+
+        .btn-custom:focus {
+            outline: 2px solid blue; /* Outline on focus */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center">CSS Pseudo-Classes Example</h1>
+
+    <div class="text-center mt-4">
+        <h2>Links</h2>
+        <p>
+            <a href="https://www.example.com" target="_blank">Visit Example.com</a>
+        </p>
+    </div>
+
+    <div class="text-center mt-4">
+        <h2>Buttons</h2>
+        <button class="btn btn-custom" onclick="alert('Button clicked!')">Click Me!</button>
+    </div>
+
+    <div class="text-center mt-4">
+        <h2>Focus Example</h2>
+        <input type="text" placeholder="Focus on me!" class="form-control" style="width: 300px; margin: auto;">
+    </div>
+</div>
+</body>
+</html>
