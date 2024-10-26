@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSI Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        legend {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="radio"] {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">MSI STUDENT REGISTRATION FORM</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            First Name : <input type="text" required><br>
+            Middle Name : <input type="text"><br>
+            Last Name : <input type="text"><br><br>
+            Mobile No. : <input type="text" required><br>
+            Course : 
+            <select required>
+                <option disabled selected>Choose course</option>
+                <option value="BBA">BBA</option>
+                <option value="BCA">BCA</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="MBA">MBA</option>
+            </select><br><br>
+            Email : <input type="email" required><br><br>
+            D.O.B : <input type="date" required><br><br>
+            Gender : 
+            <input type="radio" name="gen" value="Male"> Male 
+            <input type="radio" name="gen" value="Female"> Female 
+            <input type="radio" name="gen" value="Others"> Others
+        </fieldset>
+
+        <fieldset>
+            <legend>Address</legend>
+            Street Address : <input type="text" required><br>
+            City : <input type="text" required><br>
+            State : <input type="text" required><br>
+            Zip Code : <input type="text" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Details</legend>
+            High School Name : <input type="text" required><br>
+            Year of Passing (High School) : <input type="date" required><br>
+            Undergraduate Institution (if applicable) : <input type="text"><br>
+            Year of Passing (Undergraduate) : <input type="date"><br>
+        </fieldset>
+
+        <div align="center">
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+</body>
+</html>
