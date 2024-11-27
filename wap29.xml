@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookstore [
+    <!ELEMENT bookstore (book+)>
+    <!ELEMENT book (title, author, price, isbn)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+    <!ELEMENT isbn (#PCDATA)>
+]>
+<?xml-stylesheet type="text/css" href="style12.css"?>
+<bookstore>
+    <book>
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <price>$10.99</price>
+        <isbn>9780743273565</isbn>
+    </book>
+    <book>
+        <title>1984</title>
+        <author>George Orwell</author>
+        <price>$8.99</price>
+        <isbn>9780451524935</isbn>
+    </book>
+    <book>
+        <title>To Kill a Mockingbird</title>
+        <author>Harper Lee</author>
+        <price>$7.99</price>
+        <isbn>9780061120084</isbn>
+    </book>
+</bookstore>

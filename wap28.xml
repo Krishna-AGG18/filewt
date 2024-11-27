@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<food_menu>
+    <category>
+        <name>Grilled Chicken Sandwich</name>
+        <price>5.99</price>
+        <calories>450</calories>
+    </category>
+    <category>
+        <name>Veggie Wrap</name>
+        <price>4.49</price>
+        <calories>320</calories>
+    </category>
+    <category>
+        <name>Cheeseburger</name>
+        <price>6.49</price>
+        <calories>700</calories>
+    </category>
+    <category>
+        <name>Caesar Salad</name>
+        <price>3.99</price>
+        <calories>220</calories>
+    </category>
+    <category>
+        <name>Chocolate Milkshake</name>
+        <price>2.99</price>
+        <calories>600</calories>
+    </category>
+</food_menu>
